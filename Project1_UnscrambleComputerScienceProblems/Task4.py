@@ -46,4 +46,6 @@ if __name__ == '__main__':
             marketing_list.append(number)
 
     marketing_list.sort()
-    print(f'These numbers could be telemarketers: {marketing_list}')
+    print('These numbers could be telemarketers:')
+    for _ in marketing_list:
+        print(_)

@@ -31,4 +31,4 @@ if __name__ == '__main__':
         numbers.add(call[0])
         numbers.add(call[1])
     
-    print(f'There are {len(numbers)} different telephone numbers in the records.'
+    print(f'There are {len(numbers)} different telephone numbers in the records.')
