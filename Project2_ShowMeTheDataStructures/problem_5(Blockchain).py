@@ -96,6 +96,10 @@ print(blockchain.search('India'))
 # Timestamp: 2022-01-13 07:22:31.292923 
 # Hash: f2840de6c50bad5409a718ff58458530451e065335dde2e8b6f4133d6ff2fccf
 
-# Test Case 4
-print(blockchain.search('XYZ'))
-# Data not present
+# Test Case 4 (Edge Case)
+print(blockchain.search('XYZ')) # Data not present
+
+# Test Case 5 (Edge Case)
+blockchain2 = BlockChain()
+print(blockchain2.size())    # should return 0
+print(blockchain2.to_list()) # []
