@@ -59,12 +59,12 @@ This problem is focused on the development of the of a __trie__ a data structure
  good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
-**Searching : **
+**Searching :**
 For the __trie__, time complexity of searching from a trie depends on the length of the word **a** 
 that’s being searched for, and the number of total words, **n**, making the runtime of these operations
  __O(a*n__).
  
-**Inserting : **
+**Inserting :**
 For the __trie__, time complexity of inserting from a trie depends on the length of the word **a** 
 that’s being inserted for, and the number of total words, **n**, making the runtime of these operations
  __O(a*n__).
@@ -88,11 +88,11 @@ web pages__ instead of strings. This problem is focused on the development of th
 derived from a _tree_, suited for a good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
-**Searching : **
+**Searching :**
 For the __trie__, time complexity of searching from a trie depends on the length of the path **n**
 that’s being searched for, making the runtime of these operations __O(n)__.
  
-**Inserting : **
+**Inserting :**
 For the __trie__, time complexity of inserting from a trie depends on the length of the path **n**
 that’s being inserted, making the runtime of these operations __O(n)__.
 
