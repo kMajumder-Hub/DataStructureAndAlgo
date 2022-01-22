@@ -59,19 +59,11 @@ This problem is focused on the development of the of a __trie__ a data structure
  good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
-**Searching :**
-For the __trie__, time complexity of searching from a trie depends on the length of the word **a** 
-that’s being searched for, and the number of total words, **n**, making the runtime of these operations
- __O(a*n__).
+ insert() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
  
-**Inserting :**
-For the __trie__, time complexity of inserting from a trie depends on the length of the word **a** 
-that’s being inserted for, and the number of total words, **n**, making the runtime of these operations
- __O(a*n__).
-
-Looking into the space complexity of a __trie__, the worst case, would be when we have a word (or words),
-with no common characters between them, hence having, a node for each letter. Resulting in a _space complexity_ of 
-__O(n)__.
+ find() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ 
+ suffixes() : Each node is only inspected once, but extending the list as opposed to appending to it is relatively expensive. Therefore, its time complexity ends up O(k). The space complexity for the data structure is O(n\*m), where n is the number of words stored in the trie, and m the longest word length (worst case).
 
 ## Problem 6
 This problem focuses on __finding max and min values__ from an unsorted array, we are not required to nothing extra 
@@ -88,14 +80,4 @@ web pages__ instead of strings. This problem is focused on the development of th
 derived from a _tree_, suited for a good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
-**Searching :**
-For the __trie__, time complexity of searching from a trie depends on the length of the path **n**
-that’s being searched for, making the runtime of these operations __O(n)__.
- 
-**Inserting :**
-For the __trie__, time complexity of inserting from a trie depends on the length of the path **n**
-that’s being inserted, making the runtime of these operations __O(n)__.
-
-Looking into the space complexity of a __trie__, the worst case, would be when we have a word (or words),
-with no common characters between them, hence having, a node for each letter. Resulting in a _space complexity_ of 
-__O(n)__.
+The most interesting algorithm is lookup. Path stripping is O(n), and the find algorithm is something like O(nm), where n is the longest path and k the average number of branches: It has to iterate through the trie nodes (worst case the longest path), and at each level find the next path element out of all branches. So the overall time complexity is O(n + n * k) = O(nk). The space complexity is O(n\*m), where n is the number of paths stored in the trie, and m the longest path length (worst case).
