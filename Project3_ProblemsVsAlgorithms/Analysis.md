@@ -59,11 +59,13 @@ This problem is focused on the development of the of a __trie__ a data structure
  good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
- insert() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ Trie.insert() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
  
- find() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ Trie.find() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
  
- suffixes() : Each node is only inspected once, but extending the list as opposed to appending to it is relatively expensive. Therefore, its time complexity ends up O(k). The space complexity for the data structure is O(n\*m), where n is the number of words stored in the trie, and m the longest word length (worst case).
+ TrieNode.suffixes() : Each node is only inspected once, but extending the list as opposed to appending to it is relatively expensive. Therefore, its time complexity ends up O(k). The space complexity for the data structure is O(n\*m), where n is the number of words stored in the trie, and m the longest word length (worst case).
+ 
+ TrieNode.insert() : Since checking a dictionary is considered a fixed time operation, the time complexitty is O(1). Same is the case with space complexity.
 
 ## Problem 6
 This problem focuses on __finding max and min values__ from an unsorted array, we are not required to nothing extra 
@@ -80,8 +82,15 @@ web pages__ instead of strings. This problem is focused on the development of th
 derived from a _tree_, suited for a good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
- insert() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ RouteTrie.insert() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
  
- find() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ RouteTrie.find() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words.
  
- lookup() : The most interesting algorithm is lookup. Path stripping is O(n), and the find algorithm is something like O(nm), where n is the longest path and k the average number of branches: It has to iterate through the trie nodes (worst case the longest path), and at each level find the next path element out of all branches. So the overall time complexity is O(n + n * k) = O(nk). The space complexity is O(n\*m), where n is the number of paths stored in the trie, and m the longest path length (worst case).
+ RouteTrieNode.insert() : Since checking a dictionary is considered a fixed time operation, the time complexitty is O(1). Same is the case with space complexity.
+ 
+ Router.lookup() : The most interesting algorithm is lookup. Path stripping is O(n), and the find algorithm is something like O(nm), where n is the longest path and k the average number of branches: It has to iterate through the trie nodes (worst case the longest path), and at each level find the next path element out of all branches. So the overall time complexity is O(n + n * k) = O(nk). The space complexity is O(n\*m), where n is the number of paths stored in the trie, and m the longest path length (worst case).
+ 
+ Router.add_handler() : The method calls split_path() and insert(). It does not contribute any extra complexities.
+ 
+ Router.split_path() : The time complexity depends on the length of the raw path (technicall, the number of '/' within the raw path). Thus, it can be assumed to be O(k), where k is the length of raw path. The space complexity is also O(k) since the length of the splitted list depends in the input.
+ 
