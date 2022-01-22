@@ -80,4 +80,8 @@ web pages__ instead of strings. This problem is focused on the development of th
 derived from a _tree_, suited for a good ratio between _time and space_ complexity.
 
 ### Time and Space complexity
-The most interesting algorithm is lookup. Path stripping is O(n), and the find algorithm is something like O(nm), where n is the longest path and k the average number of branches: It has to iterate through the trie nodes (worst case the longest path), and at each level find the next path element out of all branches. So the overall time complexity is O(n + n * k) = O(nk). The space complexity is O(n\*m), where n is the number of paths stored in the trie, and m the longest path length (worst case).
+ insert() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ 
+ find() : The time complexity ofthis is O(n) and the space complexity is O(a\*n) where a is the length of the word and n is the total number of words
+ 
+ lookup() : The most interesting algorithm is lookup. Path stripping is O(n), and the find algorithm is something like O(nm), where n is the longest path and k the average number of branches: It has to iterate through the trie nodes (worst case the longest path), and at each level find the next path element out of all branches. So the overall time complexity is O(n + n * k) = O(nk). The space complexity is O(n\*m), where n is the number of paths stored in the trie, and m the longest path length (worst case).
